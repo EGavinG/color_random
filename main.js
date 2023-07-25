@@ -48,6 +48,16 @@ function randomizeColors() {
   code3Main.innerText = randHex3;
   code4Main.innerText = randHex4;
   code5Main.innerText = randHex5;
+  var hexObj = {
+    id: Date.now(),
+    hex1: randHex1,
+    hex2: randHex1,
+    hex3: randHex3,
+    hex4: randHex4,
+    hex5: randHex5,
+  };
+  newPalettesArr.push(hexObj);
+  console.log(newPalettesArr);
 }
 
 function randomHex() {
