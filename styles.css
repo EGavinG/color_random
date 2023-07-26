@@ -10,6 +10,21 @@
     font-family: "Poppins", sans-serif;
   }
   
+ /* Adam suggestion */
+.icon {
+    height: 20px;
+    margin: 3px;
+}
+
+.main-box {
+    height: 100px;
+    width: 100px;
+    border: black 3px solid;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
   .hidden {
     display: none;
   }
@@ -97,70 +112,8 @@
     cursor: pointer;
   }
   
-  .locked {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 328px;
-  }
   
-  .unlocked {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 328px;
-  }
-  .locked1 {
-    position: absolute;
-    left: 132px;
-  }
-  
-  .unlocked1 {
-    position: absolute;
-    left: 132px;
-  }
-  
-  .locked2 {
-    position: absolute;
-    left: 248px;
-  }
-  
-  .unlocked2 {
-    position: absolute;
-    left: 248px;
-  }
-  
-  .locked3 {
-    position: absolute;
-    left: 363px;
-  }
-  
-  .unlocked3 {
-    position: absolute;
-    left: 363px;
-  }
-  
-  .locked4 {
-    position: absolute;
-    left: 480px;
-  }
-  
-  .unlocked4 {
-    position: absolute;
-    left: 480px;
-  }
-  
-  .locked5 {
-    position: absolute;
-    left: 595px;
-  }
-  
-  .unlocked5 {
-    position: absolute;
-    left: 595px;
-  }
-  
-  /* SEPERATION
+  /* SEPARATION
    LINE  */
   .separator-line {
     height: 500px;
@@ -168,7 +121,7 @@
     background-color: black;
   }
   
-  /* SAVED PALLETS  */
+  /* SAVED PALLETES  */
   .savedPalettes {
     display: flex;
   }
@@ -185,7 +138,7 @@
     align-items: center;
     gap: 20px;
   }
-  .singlePallet {
+  .singlePallete {
     display: flex;
     gap: 5px;
   }

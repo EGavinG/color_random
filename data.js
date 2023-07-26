@@ -1,3 +1,3 @@
-var newPalettes = [];
+var newPalettesArr = [];
 
-var savedPallettes = [];
+var savedPallettesArr = [];
