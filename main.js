@@ -1,11 +1,11 @@
-//GOAL
-//When the button is clicked 5 random and new colors should appear
-//the color's hex codes should appear below each color box
-//the current palette should be tracked somewhere in your Data Model and updated when a new palette is generated
-
 // QUERY SELECTORS:
-
+///Palette Buttons:
 var newPaletteBtn = document.querySelector(".newPaletteBtn");
+var savePaletteBtn = document.querySelector(".savePaletteBtn");
+var savedPalettesEl = document.querySelector(".savedPalettes");
+var noSavedPallettes = document.querySelector(".no-saved-pallettes");
+var savedPallettesAside = document.querySelector(".savedPalettes");
+///Boxes && Lock Icons:
 var box1Main = document.querySelector(".box1");
 var code1Main = document.querySelector(".code1");
 var icon1 = document.querySelector(".icon1");
@@ -27,16 +27,7 @@ var code5Main = document.querySelector(".code5");
 var icon5 = document.querySelector(".icon5");
 
 var displayMain = document.querySelector(".boxesDisplayMain");
-
-var savePaletteBtn = document.querySelector(".savePaletteBtn");
-
-var savedPalettesEl = document.querySelector(".savedPalettes");
-
-var noSavedPallettes = document.querySelector(".no-saved-pallettes");
-
 var iconDelete = document.querySelector(".iconDelete");
-
-var savedPallettesAside = document.querySelector(".savedPalettes");
 
 // EVENT LISTNER:
 window.addEventListener("DOMContentLoaded", loadPage);
@@ -48,6 +39,7 @@ displayMain.addEventListener("click", unlock);
 savePaletteBtn.addEventListener("click", save);
 
 savedPallettesAside.addEventListener("click", deletePallette);
+
 //FUNCTIONS
 
 function loadPage() {
