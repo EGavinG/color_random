@@ -1,147 +1,156 @@
 /* OVERALL ELEMENTS */
-* {
-    padding: 0;
-    margin: 0;
-  }
 
-  body {
-    background-color: #e7f1f1;
-    font-family: "Poppins", sans-serif;
-  }
-  
- /* Adam suggestion */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #e7f1f1;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Adam suggestion */
 .icon {
-    height: 20px;
-    margin: 3px;
+  height: 20px;
+  margin: 3px;
+}
+
+.icon-Delete {
+  height: 35px;
+  margin: 5px;
 }
 
 .main-box {
-    height: 100px;
-    width: 100px;
-    border: black 3px solid;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  height: 100px;
+  width: 100px;
+  border: black 3px solid;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-  .hidden {
-    display: none;
-  }
-  
-  /* MAIN DISPLAY  */
-  
-  .main-home {
-    display: flex;
-    padding: 50px;
-    justify-content: space-between;
-    /* justify-content: center;
+.hidden {
+  display: none;
+}
+
+/* MAIN DISPLAY  */
+
+.main-home {
+  display: flex;
+  padding: 50px;
+  justify-content: space-between;
+  /* justify-content: center;
     align-items: center; */
-  }
-  
-  .boxMain {
-    height: 100px;
-    width: 100px;
-    border: 3px solid black;
-    position: relative;
-  }
-  
-  .boxesDisplayMain {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .displayMain {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .mainTitle {
-    font-size: 50px;
-    font-weight: 800;
-  }
-  
-  .boxCode {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .box1 {
-    background-color: #ea9999;
-  }
-  
-  .box2 {
-    background-color: #facb9c;
-  }
-  
-  .box3 {
-    background-color: #ffe59a;
-  }
-  
-  .box4 {
-    background-color: #b6d7a8;
-  }
-  
-  .box5 {
-    background-color: #a4c4ca;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 50px;
-  }
-  .btnMain {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 50px;
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
-    font-weight: 300;
-  }
-  
-  .btnMain:hover {
-    cursor: pointer;
-  }
-  
-  /* SEPARATION
+}
+
+.boxMain {
+  height: 100px;
+  width: 100px;
+  border: 3px solid black;
+  position: relative;
+}
+
+.boxesDisplayMain {
+  display: flex;
+  gap: 10px;
+}
+
+.displayMain {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainTitle {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.boxCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.box1 {
+  background-color: #ea9999;
+}
+
+.box2 {
+  background-color: #facb9c;
+}
+
+.box3 {
+  background-color: #ffe59a;
+}
+
+.box4 {
+  background-color: #b6d7a8;
+}
+
+.box5 {
+  background-color: #a4c4ca;
+}
+
+.buttons {
+  display: flex;
+  gap: 50px;
+}
+.btnMain {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  font-weight: 300;
+}
+
+.btnMain:hover {
+  cursor: pointer;
+}
+
+/* SEPARATION
    LINE  */
-  .separator-line {
-    height: 500px;
-    width: 3px;
-    background-color: black;
-  }
-  
-  /* SAVED PALLETES  */
-  .savedPalettes {
-    display: flex;
-  }
-  
-  .savedPalettesTitle {
-    font-weight: 600;
-    font-size: 30px;
-  }
-  
-  .savedPalettes {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-  }
-  .singlePallete {
-    display: flex;
-    gap: 5px;
-  }
-  .singleP {
-    height: 40px;
-    width: 40px;
-    border: 2px solid black;
-  }
+.separator-line {
+  height: 500px;
+  width: 3px;
+  background-color: black;
+}
+
+/* SAVED PALLETES  */
+.savedPalettes {
+  display: flex;
+}
+
+.savedPalettesTitle {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.savedPalettes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.singlePallete {
+  display: flex;
+  gap: 6px;
+}
+.singleP {
+  height: 40px;
+  width: 40px;
+  border: 3px solid black;
+}
+
+.icon {
+}
