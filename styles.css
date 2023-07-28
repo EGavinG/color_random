@@ -1,8 +1,10 @@
 /* OVERALL ELEMENTS */
 
+/* overflow: hidden; /*added overflow hidden */
 * {
   padding: 0;
   margin: 0;
+  overflow: hidden
 }
 
 body {
@@ -38,10 +40,10 @@ body {
 
 .main-home {
   display: flex;
-  padding: 50px;
+  /* padding: 50px; */
   justify-content: space-between;
-  /* justify-content: center;
-    align-items: center; */
+  justify-content: center;
+    align-items: flex-start;
 }
 
 .boxMain {
@@ -61,12 +63,20 @@ body {
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-bottom: 295px;
 }
+  /* display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center; */
+
 
 .mainTitle {
   font-size: 50px;
   font-weight: 800;
+  padding-top: 30px;
 }
 
 .boxCode {
@@ -100,6 +110,7 @@ body {
 .buttons {
   display: flex;
   gap: 50px;
+  margin-top: 35px;
 }
 .btnMain {
   background-color: black;
@@ -120,9 +131,11 @@ body {
 /* SEPARATION
    LINE  */
 .separator-line {
-  height: 500px;
-  width: 3px;
+  height: 800px;
+  width: 4px;
   background-color: black;
+  margin-left: 55px;
+  margin-right: 25px;
 }
 
 /* SAVED PALLETES  */
@@ -132,7 +145,11 @@ body {
 
 .savedPalettesTitle {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  margin-bottom: 35px;
 }
 
 .savedPalettes {

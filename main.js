@@ -160,45 +160,7 @@ function displaySavedPalettes() {
   savedPalettesEl.innerHTML = newHtml;
 }
 
-// Then we need to put that into the savedPalletesAside div
-
-// singlePallette.innerHTML = newHtml;
-// function save() {
-//   var newPallID = Date.now();
-//   noSavedPallettes.classList.add("hidden");
-//   var hexObj = {
-//     id: newPallID,
-//     hexCode: [
-//       code1Main.innerText,
-//       code2Main.innerText,
-//       code3Main.innerText,
-//       code4Main.innerText,
-//       code5Main.innerText,
-//     ],
-//   };
-//   savedPallettesArr.push(hexObj);
-
-//   var lastElement = savedPallettesArr.length - 1;
-//   var savedP = document.createElement("div");
-//   savedP.classList = "singlePallete";
-
-//   for (var i = 0; i < 5; i++) {
-//     var singleP = document.createElement("div");
-//     singleP.classList = "singleP";
-//     singleP.style.backgroundColor = savedPallettesArr[lastElement].hexCode[i];
-
-//     savedP.appendChild(singleP);
-//   }
-
-//   var deleteEl = document.createElement("img");
-//   deleteEl.classList = "icon iconDelete";
-//   deleteEl.src = "./assets/delete.png";
-//   deleteEl.alt = "delete button";
-//   deleteEl.id = newPallID;
-//   savedP.appendChild(deleteEl);
-//   savedPalettesEl.appendChild(savedP);
-// }
-
+///////
 function deletePallette(e) {
   var deleteID = e.target.id;
   for (var i = 0; i < savedPallettesArr.length; i++) {
@@ -221,7 +183,7 @@ function deletePallette(e) {
     }
 
     var deleteEl = document.createElement("img");
-    deleteEl.classList = "icon iconDelete";
+    deleteEl.classList = "icon icon-Delete";
     deleteEl.src = "./assets/delete.png";
     deleteEl.alt = "delete button";
     deleteEl.id = savedPallettesArr[i].id;
