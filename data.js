@@ -1,2 +1,2 @@
 var newPalettesCurr = {};
-var savedPallettesArr = [];
+var savedPalettesArr = [];

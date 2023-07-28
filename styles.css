@@ -1,10 +1,7 @@
-/* OVERALL ELEMENTS */
-
-/* overflow: hidden; /*added overflow hidden */
 * {
   padding: 0;
   margin: 0;
-  overflow: hidden
+  overflow: hidden;
 }
 
 body {
@@ -12,7 +9,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Adam suggestion */
 .icon {
   height: 20px;
   margin: 3px;
@@ -21,6 +17,10 @@ body {
 .icon-Delete {
   height: 35px;
   margin: 5px;
+}
+
+.icon-Delete:hover {
+  cursor: pointer;
 }
 
 .main-box {
@@ -40,10 +40,9 @@ body {
 
 .main-home {
   display: flex;
-  /* padding: 50px; */
   justify-content: space-between;
   justify-content: center;
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .boxMain {
@@ -66,12 +65,6 @@ body {
   justify-content: flex-start;
   padding-bottom: 295px;
 }
-  /* display: flex;
-  flex-direction: column;
-  gap: 50px;
-  align-items: center;
-  justify-content: center; */
-
 
 .mainTitle {
   font-size: 50px;
@@ -128,8 +121,6 @@ body {
   cursor: pointer;
 }
 
-/* SEPARATION
-   LINE  */
 .separator-line {
   height: 800px;
   width: 4px;
@@ -138,7 +129,6 @@ body {
   margin-right: 25px;
 }
 
-/* SAVED PALLETES  */
 .savedPalettes {
   display: flex;
 }
@@ -167,7 +157,4 @@ body {
   height: 40px;
   width: 40px;
   border: 3px solid black;
-}
-
-.icon {
 }
