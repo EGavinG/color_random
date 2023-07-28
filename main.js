@@ -1,11 +1,5 @@
-//GOAL
-//When the button is clicked 5 random and new colors should appear
-//the color's hex codes should appear below each color box
-//the current palette should be tracked somewhere in your Data Model and updated when a new palette is generated
-
 // QUERY SELECTORS:
-
-var newPaletteBtn = document.querySelector(".newPaletteBtn");
+///Boxes:
 var box1Main = document.querySelector(".box1");
 var code1Main = document.querySelector(".code1");
 var icon1 = document.querySelector(".icon1");
@@ -26,17 +20,19 @@ var box5Main = document.querySelector(".box5");
 var code5Main = document.querySelector(".code5");
 var icon5 = document.querySelector(".icon5");
 
-var displayMain = document.querySelector(".boxesDisplayMain");
-
+//saved palette:
+var newPaletteBtn = document.querySelector(".newPaletteBtn");
 var savePaletteBtn = document.querySelector(".savePaletteBtn");
-
 var savedPalettesEl = document.querySelector(".savedPalettes");
-
 var noSavedPallettes = document.querySelector(".no-saved-pallettes");
+var savedPallettesAside = document.querySelector(".savedPalettes");
 
+var singlePallette = document.querySelector(".savedPallette");
+
+//Display:
+var displayMain = document.querySelector(".boxesDisplayMain");
 var iconDelete = document.querySelector(".iconDelete");
 
-var savedPallettesAside = document.querySelector(".savedPalettes");
 
 // EVENT LISTNER:
 window.addEventListener("DOMContentLoaded", loadPage);
@@ -48,6 +44,7 @@ displayMain.addEventListener("click", unlock);
 savePaletteBtn.addEventListener("click", save);
 
 savedPallettesAside.addEventListener("click", deletePallette);
+
 //FUNCTIONS
 
 function loadPage() {
@@ -103,7 +100,7 @@ function randomizeColors() {
     ],
   };
   newPalettesCurr = hexObj;
-  console.log(newPalettesCurr);
+  // console.log(newPalettesCurr);
 }
 
 function unlock(e) {
@@ -113,5 +110,124 @@ function unlock(e) {
   } else if (e.target.src.includes("unlocked.png")) {
     e.target.src = "./assets/locked.png";
     e.target.alt = "lock icon";
+  }
+}
+
+function save() {
+  //clearing the savedPalletes container
+  var randomId = Date.now();
+  var savedPalletObj = {
+    id: randomId,
+    hexCode: [
+      code1Main.innerText,
+      code2Main.innerText,
+      code3Main.innerText,
+      code4Main.innerText,
+      code5Main.innerText,
+    ],
+  };
+  savedPallettesArr.push(savedPalletObj);
+  console.log(savedPallettesArr);
+
+  if (savedPallettesArr.length === 0) {
+    noSavedPallettes.classList.remove("hidden");
+  } else if (savedPallettesArr.length > 0) {
+    noSavedPallettes.classList.add("hidden");
+  }
+
+  displaySavedPalettes();
+}
+
+function displaySavedPalettes() {
+  savedPallettesAside.innerHTML = "";
+  var newHtml = "";
+
+  for (var i = 0; i < savedPallettesArr.length; i++) {
+    newHtml += ` <div class="singlePallete"><div class="singleP" style="background-color: ${savedPallettesArr[i].hexCode[0]}"></div>
+<div class="singleP" style="background-color: ${savedPallettesArr[i].hexCode[1]}"></div>
+<div class="singleP" style="background-color: ${savedPallettesArr[i].hexCode[2]}"></div>
+<div class="singleP" style="background-color: ${savedPallettesArr[i].hexCode[3]}"></div>
+<div class="singleP" style="background-color: ${savedPallettesArr[i].hexCode[4]}"></div>
+<img
+      class="icon icon-Delete"
+      id= ${savedPallettesArr[i].id}
+      src="./assets/delete.png"
+      alt="delete"
+    />
+    </div>`;
+  }
+  console.log(newHtml);
+  savedPalettesEl.innerHTML = newHtml;
+}
+
+// Then we need to put that into the savedPalletesAside div
+
+// singlePallette.innerHTML = newHtml;
+// function save() {
+//   var newPallID = Date.now();
+//   noSavedPallettes.classList.add("hidden");
+//   var hexObj = {
+//     id: newPallID,
+//     hexCode: [
+//       code1Main.innerText,
+//       code2Main.innerText,
+//       code3Main.innerText,
+//       code4Main.innerText,
+//       code5Main.innerText,
+//     ],
+//   };
+//   savedPallettesArr.push(hexObj);
+
+//   var lastElement = savedPallettesArr.length - 1;
+//   var savedP = document.createElement("div");
+//   savedP.classList = "singlePallete";
+
+//   for (var i = 0; i < 5; i++) {
+//     var singleP = document.createElement("div");
+//     singleP.classList = "singleP";
+//     singleP.style.backgroundColor = savedPallettesArr[lastElement].hexCode[i];
+
+//     savedP.appendChild(singleP);
+//   }
+
+//   var deleteEl = document.createElement("img");
+//   deleteEl.classList = "icon iconDelete";
+//   deleteEl.src = "./assets/delete.png";
+//   deleteEl.alt = "delete button";
+//   deleteEl.id = newPallID;
+//   savedP.appendChild(deleteEl);
+//   savedPalettesEl.appendChild(savedP);
+// }
+
+function deletePallette(e) {
+  var deleteID = e.target.id;
+  for (var i = 0; i < savedPallettesArr.length; i++) {
+    if (savedPallettesArr[i].id == deleteID) {
+      savedPallettesArr.splice(i, 1);
+    }
+  }
+
+  savedPallettesAside.innerHTML = "";
+
+  for (var i = 0; i < savedPallettesArr.length; i++) {
+    var savedP = document.createElement("div");
+    savedP.classList = "singlePallete";
+
+    for (var j = 0; j < 5; j++) {
+      var singleP = document.createElement("div");
+      singleP.classList = "singleP";
+      singleP.style.backgroundColor = savedPallettesArr[i].hexCode[j];
+      savedP.appendChild(singleP);
+    }
+
+    var deleteEl = document.createElement("img");
+    deleteEl.classList = "icon iconDelete";
+    deleteEl.src = "./assets/delete.png";
+    deleteEl.alt = "delete button";
+    deleteEl.id = savedPallettesArr[i].id;
+    deleteEl.addEventListener("click", deletePallette);
+    savedP.appendChild(deleteEl);
+
+    savedPallettesAside.appendChild(savedP);
   }
 }
